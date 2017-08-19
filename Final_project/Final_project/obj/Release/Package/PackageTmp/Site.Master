@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Final_project.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %></title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="Content/Main.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Laila" rel="stylesheet">
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <asp:ScriptReference Path="~/Scripts/main.js" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!-- Start of header - top Navbar -->
+        <header class="navbar navbar-inverse bg-inverse fixed-top bg-faded navbar__top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand navbar__top__header" runat="server" href="~/">Models4Hire</a>
+                </div>
+                <div class="navbar-collapse collapse navbar__top__list">
+                    <ul class="nav navbar-nav">
+                        <li><a class="navbar__top__item" runat="server" href="~/">Home</a></li>
+                        <li><a class="navbar__top__item" runat="server" href="~/Person">Models</a></li>
+                        <li><a class="navbar__top__item" runat="server" href="~/JoinUs">Join us</a></li>
+                        <li><a class="navbar__top__item" runat="server" href="~/Stashed">Favorite</a></li>
+                    </ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a class="navbar__top__item" runat="server" href="~/Account/Register">Register</a></li>
+                                <li><a class="navbar__top__item" runat="server" href="~/Account/Login">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><%: Context.User.Identity.GetUserName()  %></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </header>
+        <!-- End of header - top Navbar -->
+
+        <!-- Start of Section -->
+        <section class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <br />
+        </section>
+        <!-- End of section -->
+
+        <!-- Footer of the page -->
+        <footer>
+            <div class="navbar navbar-inverse navbar-fixed-bottom bg-faded">
+                <div class="container justify-content-around navbar__bottom">
+                    <div class="col-sm-3 col-xs-6 text-center">
+                        <a runat="server" href="https://github.com/RobRoch"><i class="fa fa-3x fa-github-square navbar__bottom__link" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 text-center">
+                        <a runat="server" href="mailto:rochon18@gmail.com"><i class="fa fa-3x fa-envelope navbar__bottom__link" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 text-center">
+                        <a runat="server" href="https://pl.linkedin.com/in/robert-rochon-60494775"><i class="fa fa-3x fa-linkedin-square navbar__bottom__link" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 text-center">
+                        <a runat="server" href="https://www.facebook.com/robert.rochon.12"><i class="fa fa-3x fa-facebook-square navbar__bottom__link" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End of footer -->
+    </form>
+</body>
+</html>
