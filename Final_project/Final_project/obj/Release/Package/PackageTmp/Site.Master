@@ -40,7 +40,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <!-- Start of header - top Navbar -->
+        <!--Top Navbar -->
         <header class="navbar navbar-inverse bg-inverse fixed-top bg-faded navbar__top">
             <div class="container">
                 <div class="navbar-header">
@@ -67,7 +67,7 @@
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><%: Context.User.Identity.GetUserName()  %></li>
+                                <li><a class="navbar__top__item" runat="server" href="~/Stashed"><%: Context.User.Identity.GetUserName()  %></a></li>
                                 <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
@@ -77,17 +77,17 @@
                 </div>
             </div>
         </header>
-        <!-- End of header - top Navbar -->
+        <!-- /Top Navbar -->
 
-        <!-- Start of Section -->
+        <!-- Section -->
         <section class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
             <br />
         </section>
-        <!-- End of section -->
+        <!-- /Section -->
 
-        <!-- Footer of the page -->
+        <!-- Footer -->
         <footer>
             <div class="navbar navbar-inverse navbar-fixed-bottom bg-faded">
                 <div class="container justify-content-around navbar__bottom">
@@ -106,7 +106,7 @@
                 </div>
             </div>
         </footer>
-        <!-- End of footer -->
+        <!-- /Footer -->
     </form>
 </body>
 </html>

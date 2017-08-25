@@ -4,9 +4,7 @@
 
     <!-- Title with navigation -->
     <div class="jumbotron text-center default__title">
-        <h2>
-            Registered models
-        </h2>
+        <h2>Registered models</h2>
         <h3 class="default__title__navbar">
             <!-- Used ListView and GetGenders() method to make a list of genderName from db -->
             <asp:ListView ID="genderList"
@@ -15,9 +13,7 @@
                 SelectMethod="GetGenders">
                 <ItemTemplate>
                     <span>
-                        <a href="/Person.aspx?id=<%#: Item.GenderID %>">
-                            <%#: Item.GenderName %>
-                        </a>
+                        <a href="/Person.aspx?id=<%#: Item.GenderID %>"><%#: Item.GenderName %></a>
                     </span>
                 </ItemTemplate>
                 <ItemSeparatorTemplate> || </ItemSeparatorTemplate>
@@ -29,7 +25,7 @@
             </span>
         </h3>
     </div>
-    <!-- End of title -->
+    <!-- /Title with navigation -->
 
     <!-- Person list -->
     <div class="container-fluid">
@@ -56,5 +52,5 @@
             </asp:ListView>
         </div>
     </div>
-    <!-- End of person list -->
+    <!-- /Person list -->
 </asp:Content>

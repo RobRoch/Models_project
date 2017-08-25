@@ -5,7 +5,7 @@
         <h3 class="default__title__typewriter">
             <asp:Label ID="LabelStashed" runat="server" Text=""></asp:Label></h3>
     </div>
-    <!-- End of title -->
+    <!-- /Title -->
 
     <!-- List of favorite person -->
     <asp:GridView ID="StashList" runat="server"  AutoGenerateColumns="False" GridLines="Vertical" CellPadding="4"
@@ -30,5 +30,5 @@
         </asp:TemplateField>    
         </Columns>    
     </asp:GridView>
-    <!-- End of list -->
+    <!-- /List of favorite person -->
 </asp:Content>

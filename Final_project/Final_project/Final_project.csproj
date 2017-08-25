@@ -24,6 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,6 +49,86 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NuGet.Client">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Commands">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Commands.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Common">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Configuration">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.ContentModel">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.ContentModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.DependencyResolver.Core">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.DependencyResolver.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.LibraryModel">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.LibraryModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.PackageManagement">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.PackageManagement.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Packaging">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Packaging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Packaging.Core">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Packaging.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Packaging.Core.Types">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Packaging.Core.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.ProjectManagement">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.ProjectManagement.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.ProjectModel">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.ProjectModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Protocol.Core.Types">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Protocol.Core.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Protocol.Core.v2">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Protocol.Core.v2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Protocol.Core.v3">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Protocol.Core.v3.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Protocol.VisualStudio">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Protocol.VisualStudio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Repositories">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Repositories.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.Resolver">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.Resolver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NuGet.RuntimeModel">
+      <HintPath>..\packages\JetBrains.NuGet.Ultimate.4.0.0\lib\net45\NuGet.RuntimeModel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -206,6 +287,7 @@
     <Content Include="Content\Main.min.css">
       <DependentUpon>Main.css</DependentUpon>
     </Content>
+    <Content Include="Content\Main.scss" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
@@ -218,12 +300,13 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Content\Main.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <None Include="Properties\PublishProfiles\Finalproject20170818042028 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\Finalproject20170823094453 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\Finalproject20170825060849 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="JoinUs.aspx" />
     <Content Include="Person.aspx" />
@@ -417,7 +500,7 @@
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="Models\PersonContext.cs" />
+    <Compile Include="Models\DefaultContext.cs" />
     <Compile Include="Models\PersonDatabaseInitializer.cs" />
     <Compile Include="PersonDetails.aspx.cs">
       <DependentUpon>PersonDetails.aspx</DependentUpon>
@@ -508,9 +591,9 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets'))" />
+    <Error Condition="!Exists('..\packages\BuildWebCompiler.1.11.359\build\BuildWebCompiler.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\BuildWebCompiler.1.11.359\build\BuildWebCompiler.targets'))" />
   </Target>
-  <Import Project="..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets" Condition="Exists('..\packages\BuildWebCompiler.1.11.326\build\BuildWebCompiler.targets')" />
+  <Import Project="..\packages\BuildWebCompiler.1.11.359\build\BuildWebCompiler.targets" Condition="Exists('..\packages\BuildWebCompiler.1.11.359\build\BuildWebCompiler.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

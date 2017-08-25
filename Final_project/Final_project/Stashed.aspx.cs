@@ -16,6 +16,7 @@ namespace Final_project
            
         }
 
+        //Get list of stashed favorite persons.
         public List<FavoritePerson> GetStashedFavoritePerson()
         {
             StashedActions actions = new StashedActions();

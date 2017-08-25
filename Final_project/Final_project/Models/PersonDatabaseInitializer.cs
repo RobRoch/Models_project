@@ -6,9 +6,10 @@ using System.Data.Entity;
 
 namespace Final_project.Models
 {
-    public class PersonDatabaseInitializer : DropCreateDatabaseIfModelChanges<PersonContext>
+    //Initializing database with 8 person and 3 genders.
+    public class PersonDatabaseInitializer : DropCreateDatabaseIfModelChanges<DefaultContext>
     {
-        protected override void Seed(PersonContext context)
+        protected override void Seed(DefaultContext context)
         {
             GetPersons().ForEach(p => context.Persons.Add(p));
             GetGenders().ForEach(p => context.Genders.Add(p));
@@ -21,8 +22,8 @@ namespace Final_project.Models
                 new Person
                 {
                     PersonID =1,
-                    PersonName = "Jaina",
-                    PersonSurname = "Proudmoore",
+                    PersonName = "Kasia",
+                    PersonSurname = "Mróz",
                     PersonAge = 25,
                     PersonHeight = 175,
                     PersonWeight = 54,

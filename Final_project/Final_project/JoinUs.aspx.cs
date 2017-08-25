@@ -216,7 +216,7 @@ namespace Final_project
 
         public IQueryable GetGender()
         {
-            var _db = new Final_project.Models.PersonContext();
+            var _db = new Final_project.Models.DefaultContext();
             IQueryable query = _db.Genders;
             return query;
         }

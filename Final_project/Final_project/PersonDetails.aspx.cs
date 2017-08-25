@@ -17,9 +17,10 @@ namespace Final_project
             
         }
 
+        //Get person detail information querying by ID.
         public IQueryable<Person> GetPerson([QueryString("personID")] int? personId)
         {
-            var _db = new Final_project.Models.PersonContext();
+            var _db = new Final_project.Models.DefaultContext();
             IQueryable<Person> query = _db.Persons;
             if (personId.HasValue && personId > 0)
             {

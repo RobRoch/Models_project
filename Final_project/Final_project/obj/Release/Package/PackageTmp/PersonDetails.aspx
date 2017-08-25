@@ -5,17 +5,20 @@
     <asp:FormView ID="personDetail" runat="server" ItemType="Final_project.Models.Person" SelectMethod="GetPerson" RenderOuterTable="false">
         <ItemTemplate>
             <div class="container-fluid">
+                <!-- Card -->
                 <div class="card">
                     <div class="row personDetails__row">
-                        <!-- Photo -->
+                        <!-- Card Photo -->
                         <div class="col-md-6">
-                            <div class="card-img-bottom personDetails__image" style="background: url(Catalog/Images/<%#:Item.ImagePath%>) center no-repeat"></div>
+                            <div class="card-img-bottom img-thumbnail personDetails__image" style="background: url(Catalog/Images/<%#:Item.ImagePath%>) center no-repeat"></div>
                         </div>
-                        <!-- Text -->
+                        <!-- /Card Photo -->
+                        <!-- Card Text -->
                         <div class="col-md-6">
                             <h2 class="card-title text-center personDetails__title"><%#:Item.PersonName %> <%#:Item.PersonSurname %></h2>
                             <div class="card-text">
                                 <div class="row text-center">
+                                    <!-- Person data -->
                                     <div class="col-xs-6">
                                         <h3>
                                             Age: <%#:Item.PersonAge %>
@@ -46,6 +49,7 @@
                                             Gender: <%#:Item.Gender.GenderName %>
                                         </h3>
                                     </div>
+                                    <!-- /Person data -->
                                     <!-- Navigation to person list -->
                                     <div class="col-xs-6">
                                         <h3>
@@ -54,6 +58,7 @@
                                             </a>
                                         </h3>
                                     </div>
+                                    <!-- /Navigation to person list -->
                                     <!-- Adding favorite to stash -->
                                     <div class="col-xs-6">
                                         <h3>
@@ -62,11 +67,14 @@
                                             </a>
                                         </h3>
                                     </div>
+                                     <!-- /Adding favorite to stash -->
                                 </div>
                             </div>
                         </div>
+                        <!-- /Card Text -->
                     </div>
                 </div>
+                <!-- /Card -->
             </div>
         </ItemTemplate>
     </asp:FormView>

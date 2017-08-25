@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Parametry połączenia używane w pliku web.config przez aplikację w celu uzyskiwania dostępu do bazy danych." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-Final_project-20170731062007.mdf;Initial Catalog=aspnet-Final_project-20170731062007;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\R\\Desktop\\Projekty\\\.Net_homework\\Final_project\\Final_project\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
-  </parameter>
-  <parameter name="Final_project-Web.config Connection String" description="Final_project Parametry połączenia używane w pliku web.config przez aplikację w celu uzyskiwania dostępu do bazy danych." defaultValue="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\finalproject.mdf;Integrated Security=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\R\\Desktop\\Projekty\\\.Net_homework\\Final_project\\Final_project\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Final_project']/@connectionString" />
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Parametry połączenia używane w pliku web.config przez aplikację w celu uzyskiwania dostępu do bazy danych." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-Final_project-20170731062009.mdf;Initial Catalog=aspnet-Final_project-20170731062009;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\R\\Desktop\\Projekty\\Models_project\\Final_project\\Final_project\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
 </parameters>

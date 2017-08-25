@@ -77,6 +77,7 @@ namespace Final_project
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)
         {
             Context.GetOwinContext().Authentication.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            // Abandon session while logging out, just to get new one.
             Session.Abandon();
         }
     }

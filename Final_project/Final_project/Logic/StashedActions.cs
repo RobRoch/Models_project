@@ -11,7 +11,7 @@ namespace Final_project.Logic
         
         public string StashedID { get; set; }
 
-        private PersonContext _db = new PersonContext();
+        private DefaultContext _db = new DefaultContext();
 
         public const string StashedSessionKey = "StashedFavoriteID";
 
@@ -46,7 +46,7 @@ namespace Final_project.Logic
         //Removing person from stash.
         public void RemoveFromStash(string removeStashedFavoriteID, int removePersonID)
         {
-            using (var _db = new Final_project.Models.PersonContext())
+            using (var _db = new Final_project.Models.DefaultContext())
             {
                 try
                 {
@@ -121,16 +121,6 @@ namespace Final_project.Logic
             }
             _db.SaveChanges();
         }
-
-        ////Don't need it i guess;
-        //public StashedActions GetStash(HttpContext context)
-        //{
-        //    using (var stash = new StashedActions())
-        //    {
-        //        stash.StashedID = stash.GetStashedID();
-        //        return stash;
-        //    }
-        //}
 
         //Assign stash to user.
         public void UserStash(string stashID, string userName)

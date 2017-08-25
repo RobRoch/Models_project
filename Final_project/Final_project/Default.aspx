@@ -7,22 +7,25 @@
         <h2>MODELS</h2>
         <h3 class="default__title__typewriter">MEET OUR MODELS</h3>
     </div>
-    <!-- End of title -->
+    <!-- /Title -->
 
     <!-- Additional informaction -->
     <div class="container-fluid">
         <div class="row default__row">
+            <!-- Section join us -->
             <div class="col-sm-6 col-xs-12 default__row__section">
                 <h3 class="text-center">Are you a Model?</h3>
                 <p>Want to start your modeling career? Excellently! We know how to help you achieve this!</p>
-                <p>You don't need to have experience to be a model. 
-                   We are looking for interesting faces and personalities, regardless of experience or place of residence.</p>
-                <p>All you have to do is ask someone to take your picture. Follow the instructions and we will take care of the rest.</p>
-                <p>Ready to take the first step?</p>
+                <p>you don't need to have experience to be a model. 
+                   we are looking for interesting faces and personalities, regardless of experience or place of residence.</p>
+                <p>all you have to do is ask someone to take your picture. follow the instructions and we will take care of the rest.</p>
+                <p>ready to take the first step?</p>
                 <p class="text-center">
                     <a class="btn btn-default default__row__button" href="/JoinUs.aspx">Sign up!</a>
                 </p>
             </div>
+            <!-- /Section join us -->
+            <!-- Section register -->
             <div class="col-sm-6 col-xs-12 default__row__section">
                 <h2 class="text-center">Want to keep an eye on your favorite models?</h2>
                 <p>You can easily register on our website.</p>
@@ -33,8 +36,9 @@
                     <a class="btn btn-default default__row__button" href="/Account/Register.aspx">Register!</a>
                 </p>
             </div>
+            <!-- /Section register -->
         </div>
     </div>
-    <!-- End of additional informaction -->
+    <!-- /Additional informaction -->
 
 </asp:Content>

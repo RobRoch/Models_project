@@ -12,7 +12,7 @@
             <h4 class="default__title__typewriter">Create a new account easily</h4>
         </div>
     </div>
-    <!-- Title ends -->
+    <!-- /Title register -->
 
     <!-- Register form -->
     <div class="container-fluid">
@@ -47,5 +47,5 @@
             </div>
         </div>
     </div>
-    <!-- Register form end -->
+    <!-- /Register form -->
 </asp:Content>

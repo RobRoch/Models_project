@@ -16,9 +16,10 @@ namespace Final_project
 
         }
 
+        //Get all person querying by gender.
         public IQueryable<Person> GetPersons([QueryString("id")] int? genderId)
         {
-            var _db = new Final_project.Models.PersonContext();
+            var _db = new Final_project.Models.DefaultContext();
             IQueryable<Person> query = _db.Persons;
             if (genderId.HasValue && genderId > 0) 
             {
@@ -27,9 +28,10 @@ namespace Final_project
             return query;
         }
 
+        //Get gender status from table.
         public IQueryable<Gender> GetGenders()
         {
-            var _db = new Final_project.Models.PersonContext();
+            var _db = new Final_project.Models.DefaultContext();
             IQueryable<Gender> query = _db.Genders;
             return query;
         }

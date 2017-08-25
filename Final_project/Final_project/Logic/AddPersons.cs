@@ -6,6 +6,7 @@ using Final_project.Models;
 
 namespace Final_project.Logic
 {
+    //Add person to db, logic to follow from questionnaire. 
     public class AddPersons
     {
         public bool AddPerson(string PersonName, 
@@ -29,7 +30,7 @@ namespace Final_project.Logic
             myPerson.PersonShoeSize = Convert.ToInt32(PersonShoeSize);
             myPerson.GenderID = Convert.ToInt32(PersonGender);
 
-            using (PersonContext _db = new PersonContext())
+            using (DefaultContext _db = new DefaultContext())
             {
                 _db.Persons.Add(myPerson);
                 _db.SaveChanges();
